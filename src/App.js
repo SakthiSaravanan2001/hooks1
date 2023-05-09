@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import box from "./box";
 import './App.css';
+import Ss from './ss';
+export default function Sakthi(){
+  const promise=new Promise((resolve,reject)=>{
+    
+    reject("hello saravanana")
+  })
+  
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  return(
+    <div>
+      <h1>Sakthi</h1>
+      <h2>{console.log(promise.then((data)=>{console.log(data)}).catch((dat)=>{console.log(dat)}))}</h2>
+
     </div>
-  );
+  )
 }
-
-export default App;
